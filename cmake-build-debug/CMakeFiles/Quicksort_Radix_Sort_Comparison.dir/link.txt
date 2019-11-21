@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o  -o Quicksort_Radix_Sort_Comparison.exe -Wl,--out-implib,libQuicksort_Radix_Sort_Comparison.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
