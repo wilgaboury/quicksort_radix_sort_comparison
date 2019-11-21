@@ -30,7 +30,7 @@ void validate_sorted(int *arr, size_t len) {
 }
 
 void validate_quicksort(void (*sort)(int *, size_t, size_t, size_t (*pivot_selector)(int*, size_t, size_t)), size_t test_size, size_t (*pivot_selector)(int*, size_t, size_t)) {
-    int *arr = gen_random_arr(test_size, 0, 100000);
+    int *arr = gen_random_arr(test_size, 0, 10000);
     (*sort)(arr, 0, test_size - 1, pivot_selector);
 
     validate_sorted(arr, test_size);
