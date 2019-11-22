@@ -1,3 +1,0 @@
-/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles/quickradix.dir
-/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles/edit_cache.dir

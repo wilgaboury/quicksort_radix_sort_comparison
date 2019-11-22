@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.o  -o Quicksort_Radix_Sort_Comparison 
