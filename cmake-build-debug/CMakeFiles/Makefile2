@@ -6,6 +6,16 @@ default_target: all
 
 .PHONY : default_target
 
+# The main recursive all target
+all:
+
+.PHONY : all
+
+# The main recursive preinstall target
+preinstall:
+
+.PHONY : preinstall
+
 #=============================================================================
 # Special targets provided by cmake.
 
@@ -35,64 +45,59 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/calvi/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/calvi/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison"
+CMAKE_SOURCE_DIR = /home/wilg/Code/quicksort_radix_sort_comparison
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
-# The main recursive "all" target.
-all: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/all
-
-.PHONY : all
-
 # The main recursive "clean" target.
-clean: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/clean
+clean: CMakeFiles/quickradix.dir/clean
 
 .PHONY : clean
 
-# The main recursive "preinstall" target.
-preinstall:
-
-.PHONY : preinstall
-
 #=============================================================================
-# Target rules for target CMakeFiles/Quicksort_Radix_Sort_Comparison.dir
+# Target rules for target CMakeFiles/quickradix.dir
 
 # All Build rule for target.
-CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/all:
-	$(MAKE) -f CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build.make CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/depend
-	$(MAKE) -f CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build.make CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target Quicksort_Radix_Sort_Comparison"
-.PHONY : CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/all
+CMakeFiles/quickradix.dir/all:
+	$(MAKE) -f CMakeFiles/quickradix.dir/build.make CMakeFiles/quickradix.dir/depend
+	$(MAKE) -f CMakeFiles/quickradix.dir/build.make CMakeFiles/quickradix.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target quickradix"
+.PHONY : CMakeFiles/quickradix.dir/all
+
+# Include target in all.
+all: CMakeFiles/quickradix.dir/all
+
+.PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/rule
+CMakeFiles/quickradix.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/quickradix.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/quickradix.dir/rule
 
 # Convenience name for target.
-Quicksort_Radix_Sort_Comparison: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/rule
+quickradix: CMakeFiles/quickradix.dir/rule
 
-.PHONY : Quicksort_Radix_Sort_Comparison
+.PHONY : quickradix
 
 # clean rule for target.
-CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/clean:
-	$(MAKE) -f CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build.make CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/clean
-.PHONY : CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/clean
+CMakeFiles/quickradix.dir/clean:
+	$(MAKE) -f CMakeFiles/quickradix.dir/build.make CMakeFiles/quickradix.dir/clean
+.PHONY : CMakeFiles/quickradix.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

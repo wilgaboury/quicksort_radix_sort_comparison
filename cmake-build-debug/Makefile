@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/calvi/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/calvi/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison"
+CMAKE_SOURCE_DIR = /home/wilg/Code/quicksort_radix_sort_comparison
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/cygdrive/c/Users/calvi/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/cygdrive/c/Users/calvi/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles" "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Quicksort_Radix_Sort_Comparison
+# Target rules for targets named quickradix
 
 # Build rule for target.
-Quicksort_Radix_Sort_Comparison: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Quicksort_Radix_Sort_Comparison
-.PHONY : Quicksort_Radix_Sort_Comparison
+quickradix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 quickradix
+.PHONY : quickradix
 
 # fast build rule for target.
-Quicksort_Radix_Sort_Comparison/fast:
-	$(MAKE) -f CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build.make CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build
-.PHONY : Quicksort_Radix_Sort_Comparison/fast
+quickradix/fast:
+	$(MAKE) -f CMakeFiles/quickradix.dir/build.make CMakeFiles/quickradix.dir/build
+.PHONY : quickradix/fast
 
-src/main.o: src/main.c.o
+src/api.o: src/api.c.o
 
-.PHONY : src/main.o
+.PHONY : src/api.o
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) -f CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build.make CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o
-.PHONY : src/main.c.o
+src/api.c.o:
+	$(MAKE) -f CMakeFiles/quickradix.dir/build.make CMakeFiles/quickradix.dir/src/api.c.o
+.PHONY : src/api.c.o
 
-src/main.i: src/main.c.i
+src/api.i: src/api.c.i
 
-.PHONY : src/main.i
+.PHONY : src/api.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) -f CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build.make CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.i
-.PHONY : src/main.c.i
+src/api.c.i:
+	$(MAKE) -f CMakeFiles/quickradix.dir/build.make CMakeFiles/quickradix.dir/src/api.c.i
+.PHONY : src/api.c.i
 
-src/main.s: src/main.c.s
+src/api.s: src/api.c.s
 
-.PHONY : src/main.s
+.PHONY : src/api.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) -f CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build.make CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.s
-.PHONY : src/main.c.s
+src/api.c.s:
+	$(MAKE) -f CMakeFiles/quickradix.dir/build.make CMakeFiles/quickradix.dir/src/api.c.s
+.PHONY : src/api.c.s
 
 # Help Target
 help:
@@ -157,11 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... Quicksort_Radix_Sort_Comparison"
+	@echo "... quickradix"
 	@echo "... edit_cache"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/api.o"
+	@echo "... src/api.i"
+	@echo "... src/api.s"
 .PHONY : help
 
 

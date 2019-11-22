@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/src/main.c" "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o"
+  "/home/wilg/Code/quicksort_radix_sort_comparison/src/api.c" "/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.o"
+  "/home/wilg/Code/quicksort_radix_sort_comparison/src/main.c" "/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/calvi/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/calvi/.CLion2019.2/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison"
+CMAKE_SOURCE_DIR = /home/wilg/Code/quicksort_radix_sort_comparison
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/depend.make
@@ -59,32 +59,47 @@ include CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/flags.make
 
 CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/flags.make
 CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o   -c "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/src/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o   -c /home/wilg/Code/quicksort_radix_sort_comparison/src/main.c
 
 CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/src/main.c" > CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wilg/Code/quicksort_radix_sort_comparison/src/main.c > CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.i
 
 CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/src/main.c" -o CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wilg/Code/quicksort_radix_sort_comparison/src/main.c -o CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.s
+
+CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.o: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/flags.make
+CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.o: ../src/api.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.o   -c /home/wilg/Code/quicksort_radix_sort_comparison/src/api.c
+
+CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wilg/Code/quicksort_radix_sort_comparison/src/api.c > CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.i
+
+CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wilg/Code/quicksort_radix_sort_comparison/src/api.c -o CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.s
 
 # Object files for target Quicksort_Radix_Sort_Comparison
 Quicksort_Radix_Sort_Comparison_OBJECTS = \
-"CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o"
+"CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o" \
+"CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.o"
 
 # External object files for target Quicksort_Radix_Sort_Comparison
 Quicksort_Radix_Sort_Comparison_EXTERNAL_OBJECTS =
 
-Quicksort_Radix_Sort_Comparison.exe: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o
-Quicksort_Radix_Sort_Comparison.exe: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build.make
-Quicksort_Radix_Sort_Comparison.exe: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Quicksort_Radix_Sort_Comparison.exe"
+Quicksort_Radix_Sort_Comparison: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o
+Quicksort_Radix_Sort_Comparison: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.o
+Quicksort_Radix_Sort_Comparison: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build.make
+Quicksort_Radix_Sort_Comparison: CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Quicksort_Radix_Sort_Comparison"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build: Quicksort_Radix_Sort_Comparison.exe
+CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build: Quicksort_Radix_Sort_Comparison
 
 .PHONY : CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/build
 
@@ -93,6 +108,6 @@ CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/clean:
 .PHONY : CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/clean
 
 CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/depend:
-	cd "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison" "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison" "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug" "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug" "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wilg/Code/quicksort_radix_sort_comparison /home/wilg/Code/quicksort_radix_sort_comparison /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/depend
 

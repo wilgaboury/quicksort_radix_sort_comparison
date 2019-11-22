@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison
+# Install script for directory: /home/wilg/Code/quicksort_radix_sort_comparison
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -27,6 +27,11 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "0")
+endif()
+
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
@@ -40,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

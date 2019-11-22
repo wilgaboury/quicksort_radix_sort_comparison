@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/api.c.o"
   "CMakeFiles/Quicksort_Radix_Sort_Comparison.dir/src/main.c.o"
-  "Quicksort_Radix_Sort_Comparison.exe"
+  "Quicksort_Radix_Sort_Comparison"
   "Quicksort_Radix_Sort_Comparison.pdb"
-  "libQuicksort_Radix_Sort_Comparison.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

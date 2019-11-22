@@ -1,4 +1,4 @@
-C:\Users\calvi\.CLion2019.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison"
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/wilg/Code/quicksort_radix_sort_comparison
 -- Configuring done
 -- Generating done
--- Build files have been written to: /cygdrive/c/Users/calvi/Desktop/Desktop 4.0/School/Research/Quicksort Radix Sort Comparison/cmake-build-debug
+-- Build files have been written to: /home/wilg/Code/quicksort_radix_sort_comparison/cmake-build-debug
