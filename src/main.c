@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include "quicksorts.c"
-#include "tester.c"
+#include "tester.h"
 #include "pivot-selection.c"
 
 int main() {

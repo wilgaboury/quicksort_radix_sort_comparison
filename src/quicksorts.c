@@ -2,13 +2,6 @@
 // Created by Calvin Hirsch on 10/29/2019.
 //
 
-void print_arr(int *arr, size_t start, size_t end) {
-    for (int i = start; i <= end; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-}
-
 void quicksort_standard (int *arr, size_t start, size_t end, size_t (*pivot_selector)(int*, size_t, size_t)) {
     size_t start_large, start_unvisited, pivot_ind;
     int temp, pivot;
