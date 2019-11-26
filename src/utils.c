@@ -23,6 +23,6 @@ int * gen_random_arr(size_t size, int lowest_val, int val_range) {
     return arr;
 }
 
-int int_compare_func (void * a, void * b) {
+int int_compare_func (const void * a, const void * b) {
     return ( *(int*)a - *(int*)b );
 }

@@ -2,8 +2,12 @@
 // Created by Calvin Hirsch on 10/29/2019.
 //
 
+#include "quicksorts.h"
+
+#include "utils.h"
+
 void quicksort_stdlib (int *arr, size_t start, size_t end, pivot_selector_func_t pivot_selector) {
-    qsort((arr + start), end - start + 1, sizeof(int), );
+    qsort((arr + start), end - start + 1, sizeof(int), &int_compare_func);
 }
 
 void quicksort_standard (int *arr, size_t start, size_t end, pivot_selector_func_t pivot_selector) {

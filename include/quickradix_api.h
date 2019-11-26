@@ -4,7 +4,9 @@
 
 #include <stdint.h>
 
-#include "quicksorts.h"
+#include "../src/quicksorts.h"
+#include "../src/radixsorts.h"
+#include "../src/tester.h"
 
 #ifndef QUICKSORT_RADIX_SORT_COMPARISON_API_H
 #define QUICKSORT_RADIX_SORT_COMPARISON_API_H

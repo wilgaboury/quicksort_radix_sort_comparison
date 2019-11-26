@@ -2,10 +2,12 @@
 // Created by Calvin Hirsch on 11/20/2019.
 //
 
+#include "pivot_selection.h"
+
 // MEDIAN FINDING METHODS (return index of median)
 
 // Quickselect method using indices array to keep track of changing value locations and return index without modifying original array
-size_t median_quickselect_helper(int *arr, size_t *indices, size_t start, size_t end, size_t middle, size_t (*pivot_selector)(int*, size_t, size_t)) {
+size_t median_quickselect_helper(int *arr, size_t *indices, size_t start, size_t end, size_t middle, pivot_selector_func_t pivot_selector) {
     // TO-DO: Actually use pivot_selector, doesn't work regularly due to indices array
     size_t start_large, start_unvisited, pivot_ind;
     size_t temp, pivot;
@@ -43,7 +45,7 @@ size_t median_quickselect_helper(int *arr, size_t *indices, size_t start, size_t
     }
 }
 
-size_t median_quickselect(int *arr, size_t len, size_t (*pivot_selector)(int*, size_t, size_t)) {
+size_t median_quickselect(int *arr, size_t len, pivot_selector_func_t pivot_selector) {
     // TO-DO: Find fastest way of quickselecting, currently standard quicksort
     size_t indices[len];
     for (int i = 0; i < len; i++) { indices[i] = i; }

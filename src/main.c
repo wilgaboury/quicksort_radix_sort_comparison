@@ -3,9 +3,9 @@
 //
 
 #include <stdio.h>
-#include "quicksorts.c"
+#include "quicksorts.h"
 #include "tester.h"
-#include "pivot-selection.c"
+#include "pivot_selection.c"
 
 int main() {
     validate_quicksort(quicksort_out_in, 1000, pivot_end);
