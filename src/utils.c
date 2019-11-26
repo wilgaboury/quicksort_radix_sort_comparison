@@ -2,6 +2,8 @@
 // Created by root on 11/24/19.
 //
 
+#include "utils.h"
+
 #include <stdio.h>
 
 void print_arr(int *arr, size_t start, size_t end) {
@@ -19,4 +21,8 @@ int * gen_random_arr(size_t size, int lowest_val, int val_range) {
     }
 
     return arr;
+}
+
+int int_compare_func (void * a, void * b) {
+    return ( *(int*)a - *(int*)b );
 }

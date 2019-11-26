@@ -2,7 +2,11 @@
 // Created by Calvin Hirsch on 10/29/2019.
 //
 
-void quicksort_standard (int *arr, size_t start, size_t end, size_t (*pivot_selector)(int*, size_t, size_t)) {
+void quicksort_stdlib (int *arr, size_t start, size_t end, pivot_selector_func_t pivot_selector) {
+    qsort((arr + start), end - start + 1, sizeof(int), );
+}
+
+void quicksort_standard (int *arr, size_t start, size_t end, pivot_selector_func_t pivot_selector) {
     size_t start_large, start_unvisited, pivot_ind;
     int temp, pivot;
 
