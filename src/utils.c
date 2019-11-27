@@ -3,7 +3,6 @@
 //
 
 #include "utils.h"
-
 #include <stdio.h>
 
 void print_arr(int *arr, size_t start, size_t end) {
@@ -13,7 +12,14 @@ void print_arr(int *arr, size_t start, size_t end) {
     printf("\n");
 }
 
-int * gen_random_arr(size_t size, int lowest_val, int val_range) {
+void print_arr_indices(int *arr, size_t* indices, size_t start, size_t end) {
+    for (size_t i = start; i <= end; i++) {
+        printf("%d ", arr[indices[i]]);
+    }
+    printf("\n");
+}
+
+int *gen_random_arr(size_t size, int lowest_val, int val_range) {
     int *arr = malloc(size * sizeof(int));
 
     for (int i = 0; i < size; i++) {

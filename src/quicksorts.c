@@ -3,10 +3,9 @@
 //
 
 #include "quicksorts.h"
-
 #include "utils.h"
 
-void quicksort_stdlib (int *arr, size_t start, size_t end, pivot_selector_func_t pivot_selector) {
+void quicksort_stdlib (int *arr, size_t start, size_t end, pivot_selector_func_t _) {
     qsort((arr + start), end - start + 1, sizeof(int), &int_compare_func);
 }
 

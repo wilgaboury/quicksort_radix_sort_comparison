@@ -8,6 +8,7 @@
 #define QUICKSORT_RADIX_SORT_COMPARISON_UTILS_H
 
 void print_arr(int *arr, size_t start, size_t end);
+void print_arr_indices(int *arr, size_t *indices, size_t start, size_t end);
 int * gen_random_arr(size_t size, int lowest_val, int highest_val);
 int int_compare_func(const void *, const void *);
 
