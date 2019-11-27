@@ -30,7 +30,7 @@ void validate_median(median_finder_func_t median_finder, size_t test_size, pivot
     test_size += (test_size % 2 ? 0 : 1);
     int *arr = gen_random_arr(test_size, 0, 50);
 
-    print_arr(arr, 0, test_size - 1);
+    //print_arr(arr, 0, test_size - 1);
 
     int median_est = arr[(*median_finder)(arr, test_size, pivot_selector)];
     qsort(arr, test_size, sizeof(int), &int_compare_func);
@@ -46,7 +46,7 @@ void validate_median(median_finder_func_t median_finder, size_t test_size, pivot
     }
 
     if (median == median_est) {
-        printf("MEDIAN VALIDATION SUCCESSFUL\n");
+        printf("MEDIAN VALIDATION SUCCEEDED\n");
     }
     else {
         printf("MEDIAN VALIDATION FAILED -- Received: %d (%d), Actual: %d (%d)\n", median_est, median_est_ind, median, median_ind);

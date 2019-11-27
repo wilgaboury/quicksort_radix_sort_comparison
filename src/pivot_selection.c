@@ -10,14 +10,14 @@
 
 // Quickselect method using indices array to keep track of changing value locations and return index without modifying original array
 size_t median_quickselect_standard_helper(int *arr, size_t *indices, size_t start, size_t end, size_t middle, pivot_ind_selector_func_t pivot_selector) {
-    printf("---------\n%d -> %d\n", start, end);
+    //printf("---------\n%d -> %d\n", start, end);
     size_t start_large, start_unvisited, pivot_ind, temp, pivot;
 
     if (start + 1 < end) {
         start_large = start;
         start_unvisited = start;
         pivot_ind = pivot_selector(arr, indices, start, end);
-        printf("P: %d\n", pivot_ind);
+        //printf("P: %d\n", pivot_ind);
         pivot = arr[indices[pivot_ind]];
 
         temp = indices[pivot_ind];
@@ -35,9 +35,9 @@ size_t median_quickselect_standard_helper(int *arr, size_t *indices, size_t star
             }
 
             start_unvisited++;
-            printf(" > %d", start_large);
+            //printf(" > %d", start_large);
         }
-        printf("\n");
+        //printf("\n");
 
         temp = indices[pivot_ind];
         indices[pivot_ind] = indices[start_large];
@@ -69,6 +69,7 @@ size_t median_quickselect_standard_helper(int *arr, size_t *indices, size_t star
     return indices[start];
 }
 
+// Quickselect based on standard quicksort
 size_t median_quickselect_standard(int *arr, size_t len, pivot_ind_selector_func_t pivot_selector) {
     size_t indices[len];
     for (size_t i = 0; i < len; i++) { indices[i] = i; }
@@ -84,6 +85,7 @@ size_t pivot_end(int *arr, size_t start, size_t end) {
     return end;
 }
 
+// Pivot on last element (operates on index array)
 size_t pivot_end_ind(int *arr, size_t *indices, size_t start, size_t end) {
     return end;
 }
@@ -144,6 +146,7 @@ size_t pivot_median_3_split(int *arr, size_t start, size_t end) {
     return end;
 }
 
+// Pivot on median of 3 values with evenly split indices (operates on index array)
 size_t pivot_median_3_split_ind(int *arr, size_t *indices, size_t start, size_t end) {
     size_t mid = start + (end - start) / 2;
     if (arr[indices[start]] > arr[indices[mid]]) {
@@ -170,7 +173,7 @@ size_t pivot_median_5_split(int *arr, size_t start, size_t end) {
     return pivot_median_k_split(arr, 5, start, end, pivot_median_5_split_ind);
 }
 
-// Pivot on median of 5 values with evenly split indices
+// Pivot on median of 5 values with evenly split indices (operates on index array)
 size_t pivot_median_5_split_ind(int *arr, size_t *indices, size_t start, size_t end) {
     // TO-DO: Hardcode
     if (start + 5 > end) {
@@ -198,9 +201,9 @@ size_t pivot_median_crn_split_ind(int *arr, size_t *indices, size_t start, size_
     return pivot_median_k_split_ind(arr, indices, count, start, end, pivot_median_crn_split_ind);
 }
 
-
+// General function for median of k values from randomly selected indices
 size_t pivot_median_k_random(int *arr, size_t k, size_t start, size_t end, pivot_ind_selector_func_t pivot_selector) {
-    int *check_indices = gen_random_arr(k, start, end);
+    int *check_indices = gen_random_arr(k, start, end - start + 1);
     int check[k];
 
     for (size_t i = 0; i < k; i++) {
@@ -213,9 +216,9 @@ size_t pivot_median_k_random(int *arr, size_t k, size_t start, size_t end, pivot
     return r;
 }
 
+// General function for median of k values from randomly selected indices (operates on index array)
 size_t pivot_median_k_random_ind(int *arr, size_t *indices, size_t k, size_t start, size_t end, pivot_ind_selector_func_t pivot_selector) {
-    printf("=================\n");
-    int *check_indices = gen_random_arr(k, start, end);
+    int *check_indices = gen_random_arr(k, start, end - start + 1);
     int check[k];
 
     for (size_t i = 0; i < k; i++) {
@@ -224,11 +227,11 @@ size_t pivot_median_k_random_ind(int *arr, size_t *indices, size_t k, size_t sta
 
     size_t r = check_indices[median_quickselect_standard(check, k, pivot_selector)];
     free(check_indices);
-    printf("=================\n");
 
     return r;
 }
 
+// Pivot on median of 3 randomly selected values
 size_t pivot_median_3_random(int *arr, size_t start, size_t end) {
     // TO-DO: Update to custom random
 
@@ -255,6 +258,7 @@ size_t pivot_median_3_random(int *arr, size_t start, size_t end) {
     return c;
 }
 
+// Pivot on median of 3 randomly selected values (operates on index array)
 size_t pivot_median_3_random_ind(int *arr, size_t *indices, size_t start, size_t end) {
     // TO-DO: Update to custom random
 
@@ -281,11 +285,13 @@ size_t pivot_median_3_random_ind(int *arr, size_t *indices, size_t start, size_t
     return c;
 }
 
+// Pivot on median of 5 randomly selected values
 size_t pivot_median_5_random(int *arr, size_t start, size_t end) {
     // TO-DO: Hardcode
     return pivot_median_k_random(arr, 5, start, end, pivot_median_5_random_ind);
 }
 
+// Pivot on median of 5 randomly selected values (operates on index array)
 size_t pivot_median_5_random_ind(int *arr, size_t *indices, size_t start, size_t end) {
     // TO-DO: Hardcode
     if (start + 5 > end) {
@@ -295,6 +301,7 @@ size_t pivot_median_5_random_ind(int *arr, size_t *indices, size_t start, size_t
     return pivot_median_k_random_ind(arr, indices, 5, start, end, pivot_median_5_random_ind);
 }
 
+// Pivot on median of cube root of n randomly selected values
 size_t pivot_median_crn_random(int *arr, size_t start, size_t end) {
     size_t count = pow(end - start, 1.0/3.0);
     count -= count % 2 ? 0 : 1;
@@ -303,6 +310,7 @@ size_t pivot_median_crn_random(int *arr, size_t start, size_t end) {
     return pivot_median_k_random(arr, count, start, end, pivot_median_crn_random_ind);
 }
 
+// Pivot on median of cube root of n randomly selected values (operates on index array)
 size_t pivot_median_crn_random_ind(int *arr, size_t *indices, size_t start, size_t end) {
     size_t count = pow(end - start, 1.0/3.0);
     count -= count % 2 ? 0 : 1;
